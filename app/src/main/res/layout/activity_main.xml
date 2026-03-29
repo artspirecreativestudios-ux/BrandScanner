@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brand Scanner"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:spacing="8dp">
+
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Capture &amp; Scan"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pick from Gallery"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/teal" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/brandsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detected Brands:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/brandsResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No brands detected yet"
+                android:textSize="14sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/fullTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Text Detected:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/fullTextResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No text detected yet"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:padding="8dp"
+                android:background="@color/light_gray" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
